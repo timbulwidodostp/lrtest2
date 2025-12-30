@@ -2,4 +2,4 @@
 1
 2
 3
-p dea Data envelopment analysis
+p lrtest2 Likelihood-ratio test after model estimation using a forward strategy Use lrtest2 With STATA 19
