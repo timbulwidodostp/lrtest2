@@ -1,4 +1,4 @@
-D 'DEA': Data envelopment analysis
+D 'lrtest2': Likelihood-ratio test after model estimation using a forward strategy Use lrtest2 With STATA 19
 D
-F dea.ado
-F dea.sthlp
+F lrtest2.ado
+F lrtest2.hlp
