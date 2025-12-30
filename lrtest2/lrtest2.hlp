@@ -1,0 +1,72 @@
+.-
+help for ^lrtest2^                                    (STB-49: sg111)
+.-
+
+Likelihood-ratio test after model estimation using a forward strategy 
+---------------------------------------------------------------------
+
+	^lrtest2^ [^, s^aving^(^name^)^ ^u^sing^(^name^)^ ^m^odel^(^name^)^ ^d^f^(^#^)^ ]
+
+
+Description
+-----------
+
+^lrtest2^ is a simple modification of the official ^lrtest^ command, to perform
+the likelihood-ratio test under a forward strategy, although a backward 
+strategy is also permitted. 
+
+^lrtest2^ saves information about and performs likelihood-ratio tests between
+pairs of maximum-likelihood models such as those estimated by ^stcox^, ^logit^, 
+^logistic^, ^poisson^, etc. using a forward strategy. 
+
+^lrtest2^, typed without arguments, performs a likelihood-ratio test of the 
+most recently estimated model -simplest model- against the model previously 
+saved -complete model- by "^lrtest2,^ ^saving(0)^". 
+
+
+Options
+-------
+
+^lrtest2^ has same syntax and options as ^lrtest^.
+
+
+Examples
+--------
+
+ using ^lrtest2^ we must follow a forward strategy
+
+ . ^logit chd age sex^                         estimate simplest model
+ . ^lrtest2, saving(0)^                        save results
+ . ^logit chd age age2 sex^                    estimate comlpete model
+ . ^lrtest2^                                   obtain test
+
+ while using ^lrtest^, a backward strategy must be follow
+
+ . ^logit chd age age2 sex^                    estimate complete model
+ . ^lrtest, saving(0)^                         save results
+ . ^logit chd age sex^                         estimate simplest model
+ . ^lrtest^                                    obtain test
+
+
+Authors
+-------
+
+      Santiago Perez-Hoyos
+      Institut Valencia d'Estudis en Salut Publica, Valencia (Spain)
+      e-mail: sperez@@san.gva.es
+
+      Aurelio Tobias
+      Statistical Consultant, Getafe (Spain)
+      e-mail: bledatobias@@ctv.es
+
+      after official Stata's ^lrtest^ command
+
+
+Also see
+--------
+
+    STB:  STB-49 sg111
+ Manual:  ^[U] 26 Estimation and post-estimation commands^
+	  ^[R] lrtest^
+On-line:  help for @lrtest@
+
