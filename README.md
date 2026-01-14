@@ -1,6 +1,8 @@
 # lrtest2
 Likelihood-ratio test after model estimation using a forward strategy Use lrtest2 With STATA 19
 
+https://www.youtube.com/watch?v=p78430vvl5A
+
 Olah Data Semarang
 
 WA: +6285227746673 (085227746673)
